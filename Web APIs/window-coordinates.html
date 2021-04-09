@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+        }
+        .item{
+            background-color: lightgoldenrodyellow;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .point{
+            background-color:palevioletred;
+            cursor: pointer;
+        }
+        .button{
+            position: fixed;
+            top: 24px;
+            right: 20px;          
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="items">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item point"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="button">
+        <button class="scrollBy">y축으로 100px 이동</button>
+        <button class="move100px">pageY=100 으로 이동</button>
+        <button class="movePoint">point로 이동</button>
+    </div>
+    <script>
+        //DOMRect, client 좌표, page 좌표 콘솔에 출력
+        const point = document.querySelector('.point');
+        point.addEventListener('click', (event)=>{   
+            const rect = point.getBoundingClientRect();
+            console.log(rect);
+            console.log(`client: ${event.clientX}, ${event.clientY}`);
+            console.log(`page: ${event.pageX}, ${event.pageY}`);
+        });
+
+        //y축으로 100px 이동
+        const scrollBy = document.querySelector('.scrollBy');
+        scrollBy.addEventListener('click', () => {
+            window.scrollBy(0, 100);
+        });
+
+        //pageY=100 으로 이동
+        const move100px = document.querySelector('.move100px');
+        move100px.addEventListener('click', () => {
+            window.scrollTo({
+            top: 100,
+            left: 0,
+            behavior: 'smooth'});
+        });
+        
+        //point로 이동
+        const movePoint = document.querySelector('.movePoint');
+        movePoint.addEventListener('click', () => {
+            point.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

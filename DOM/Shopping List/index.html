@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/301043e4a8.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <title>Shopping List</title>
+</head>
+<body>
+    <section id="shopping">
+        <h1 class="shopping__title">Shopping List</h1>
+        <div class="shopping__list">
+            <ul class="items">
+                <li class="item">우유</li>
+                <li class="item">달걀</li>
+                <li class="item">시금치</li>
+                <li class="item">소고기</li>
+                <li class="item">라면</li>
+            </ul>
+            <ul class="trashBox">
+                <li class="trash"><i class="fas fa-trash-alt"></i></li>
+                <li class="trash"><i class="fas fa-trash-alt"></i></li>
+                <li class="trash"><i class="fas fa-trash-alt"></i></li>
+                <li class="trash"><i class="fas fa-trash-alt"></i></li>
+                <li class="trash"><i class="fas fa-trash-alt"></i></li>
+            </ul>
+        </div>   
+        <div class="shopping__add">
+            <label for="shopping__input"><input type="text" id="shopping__input"></label> 
+            <button class="shopping__btn">
+                <i class="fas fa-plus"></i><span class="btn__text">Add new item</span>
+            </button>    
+        </div>
+    </section>
+</body>
+</html>
