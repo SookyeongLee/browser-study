@@ -32,15 +32,13 @@ body {
   font-size: 1.1em;
 }
 .item {
-  margin: 16px 0;
-  padding: 4px;
+  margin: 20px 4px;
 }
 .trashBox {
   font-size: 1.1em;
 }
 .trash {
-  margin: 16px 0;
-  padding: 4px;
+  margin: 20px 4px;
   cursor: pointer;
   transition: transform 300ms ease-out;
 }
@@ -55,7 +53,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-#shopping__input {
+.shopping__input {
   outline: none;
   height: 28px;
   font-size: 1.1em;
