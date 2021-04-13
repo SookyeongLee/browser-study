@@ -15,9 +15,10 @@ input.addEventListener('keyup',  (event)=>{
 });
 
 items.addEventListener('click', (event) =>{
-    if(event.target.tagName == 'I'){
-        items.removeChild(event.target.parentNode.parentNode.parentNode);
-        //event.target.parentNode.parentNode.parentNode.remove();
+    const id = event.target.dataset.id;
+    if(id){
+        const item = document.querySelector(`.item[data-id="${id}"]`);         
+        item.remove();
     }
 });
 
@@ -45,42 +46,23 @@ function updateItem(){
     input.focus();
 }
 
+let id = 0;
 function makeItem(text){
     const li = document.createElement('li');
     li.setAttribute('class', 'item');
+    li.setAttribute('data-id', id);
     li.innerHTML = `
-        <li class="item">
-            <div class="item__container">
-                <span class="item__name">${text}</span>
-                <button class="item__trash">
-                    <i class="fas fa-trash-alt"></i>
-                </button>
-            </div>
-            <div class="item__divider"></div>
-        </li>
+        <div class="item__container">
+            <span class="item__name">${text}</span>
+            <button class="item__trash">
+                <i class="fas fa-trash-alt" data-id=${id}></i>
+            </button>
+        </div>
+        <div class="item__divider"></div>
     `;
 
-    // const item = document.createElement('div');
-    // item.setAttribute('class', 'item__container');
-
-    // const name = document.createElement('span');
-    // name.setAttribute('class', 'item__name');
-    // name.textContent = text;
-
-    // const trash = document.createElement('button');
-    // trash.setAttribute('class', 'item__trash');
-    // trash.innerHTML = '<i class="fas fa-trash-alt"></i>';
-    // 이벤트 위임을 이용해 개선
-    // trash.addEventListener('click', () =>{
-    //     items.removeChild(li);
-    // });
-
-    // const divider = document.createElement('div');
-    // divider.setAttribute('class', 'item__divider');
-
-    // item.appendChild(name);
-    // item.appendChild(trash);
-    // li.appendChild(item);
-    // li.appendChild(divider);    
+    id++;
     return li;
 }
+
+
