@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+.game {
+  width: 1000px;
+  height: 562px;
+  background: url("img/background.png");
+  background-size: 100%;
+  margin: auto;
+  border-radius: 20px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__button {
+  width: 50px;
+  height: 50px;
+  background-color: blanchedalmond;
+  border: 3px solid black;
+  border-radius: 8px;
+  font-size: 20px;
+  margin-top: 8px;
+}
+.header__button:hover {
+  transform: scale(1.1);
+}
+.header__timer {
+  width: 140px;
+  height: 40px;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 8px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+.header__remainder {
+  width: 50px;
+  height: 50px;
+  background-color: coral;
+  color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+.bug,
+.carrot {
+  position: absolute;
+  cursor: pointer;
+}

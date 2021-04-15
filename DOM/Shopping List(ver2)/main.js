@@ -31,7 +31,7 @@ function updateItem(){
         input.focus();
         return;
     }
-
+    
     //2. 새로운 item을 생성
     const item = makeItem(text);
 
