@@ -11,4 +11,4 @@
 * [x] 추가된 item으로 스크롤링
 * [x] input을 초기화하고 focus 다시 주기 
 ## ✨ Implement
-![장바구니](https://user-images.githubusercontent.com/74999421/115770105-3a8ca200-a3e7-11eb-9648-39290eef9817.gif)
+![장바구니](https://user-images.githubusercontent.com/74999421/115770414-a40cb080-a3e7-11eb-844d-4ff1104d7f44.gif)
