@@ -1,4 +1,4 @@
-# 🛒 SHOPPING CART ITEMS
+# 🛒 Shopping Cart Items
 ## ✨ Stacks
 * HTML5
 * CSS3
