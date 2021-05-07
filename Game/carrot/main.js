@@ -1,11 +1,11 @@
-const section = document.querySelector('.section');
-const headerBtn = document.querySelector('.header__button');
+const gameField = document.querySelector('.game__field');
+const gameBtn = document.querySelector('.game__button');
 const carrot = document.querySelector('.carrot');
-let number = document.querySelector('.header__remainder');
+let number = document.querySelector('.game__remainder');
 
 
-headerBtn.addEventListener('click', () => {
-    headerBtn.innerHTML = '<i class="fas fa-square"></i>';
+gameBtn.addEventListener('click', () => {
+    gameBtn.innerHTML = '<i class="fas fa-square"></i>';
 
     for(let i = 0; i<7; i++){
         const bugs = new Array();
@@ -13,7 +13,7 @@ headerBtn.addEventListener('click', () => {
         bug = document.createElement ( 'img');
         bug.setAttribute ( "class", "bug");
         bug.setAttribute ( "src", "img/bug.png");
-        section.appendChild (bug);
+        gameField.appendChild (bug);
         let xy = getRandomPosition (bug);
         bug.style.top = xy [0] + 'px';
         bug.style.left = xy [1] + 'px';
@@ -25,7 +25,7 @@ headerBtn.addEventListener('click', () => {
         carrot = document.createElement ( 'img');
         carrot.setAttribute ( "class", "carrot");
         carrot.setAttribute ( "src", "img/carrot.png");
-        section.appendChild (carrot);
+        gameField.appendChild (carrot);
         let xy = getRandomPosition (carrot);
         carrot.style.top = xy [0] + 'px';
         carrot.style.left = xy [1] + 'px';  
@@ -47,8 +47,8 @@ headerBtn.addEventListener('click', () => {
 });
 
 function getRandomPosition (element) {
-	let x = section.offsetHeight-element.clientHeight;
-	let y = section.offsetWidth-element.clientWidth;
+	let x = gameField.offsetHeight-element.clientHeight;
+	let y = gameField.offsetWidth-element.clientWidth;
 	let randomX = Math.floor (Math.random () * x);
 	let randomY = Math.floor (Math.random () * y);
 	return [randomX, randomY];
